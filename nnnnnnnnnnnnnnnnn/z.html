@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Page</title>
+    <style>
+        /* CSS to style the button and form */
+        #orderNowButton {
+            padding: 10px 20px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #orderForm {
+            background-color: #f9f9f9;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px; /* Adjust margin to fit your layout */
+        }
+
+        #orderForm h2 {
+            margin-top: 0;
+        }
+    </style>
+</head>
+<body>
+    <button id="orderNowButton">Order Now</button>
+
+    <!-- Other content -->
+
+    <!-- Form section -->
+    <div id="orderForm">
+        <h2>Order Form</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br>
+            <label for="address">Address:</label><br>
+            <textarea id="address" name="address"></textarea><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('orderNowButton').addEventListener('click', function() {
+            document.getElementById('orderForm').scrollIntoView({ behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>

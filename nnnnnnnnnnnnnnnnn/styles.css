@@ -1,0 +1,144 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header {
+    background-color: #cccccc;
+    text-align: center;
+    padding: 10px;
+    font-weight: bold;
+}
+
+.main-content {
+    display: flex;
+    margin-top: 10px;
+}
+
+.left-column {
+    flex: 1;
+    padding: 10px;
+}
+
+.main-image {
+    background-color: red;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.thumbnail-images {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.thumbnail {
+    background-color: red;
+    width: 18%;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+}
+
+.right-column {
+    flex: 2;
+    padding: 10px;
+}
+
+.right-column h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating span {
+    margin-right: 10px;
+}
+
+.price {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.discount {
+    color: red;
+    margin-right: 10px;
+}
+
+.price-now {
+    font-size: 24px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.price-original {
+    text-decoration: line-through;
+}
+
+.limited-time-deal {
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    margin-bottom: 10px;
+    height: 0.9cm;
+    width: 4cm;
+    background-color: rgb(31, 241, 12);
+    border-radius: 23px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+   }  
+
+.delivery-info p {
+    margin: 5px 0;
+}
+
+.order-info {
+    background-color: #f0f0f0;
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.order-info p {
+    margin: 5px 0;
+}
+
+.quantity {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.order-button {
+    text-align: center;
+}
+
+.order-button button {
+    background-color: green;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+.footer {
+    background-color: #cccccc;
+    height: 100px;
+    margin-top: 20px;
+}

@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            background-color: #6b6e5a;
+            color: rgb(250, 246, 246);
+            text-align: center;
+            padding: 20px;
+            font-weight: bold;
+          
+            
+        }
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: 20px;
+            gap: 20px;
+        }
+        .left-column, .right-column {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+        }
+        .left-column {
+            flex: 1;
+        }
+        .main-image {
+            background-image: url(1.jpg);
+            height: 480px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+        }
+        .thumbnail-images {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+
+        }
+        .thumbnail {
+            background-color: #ddd;
+            width: 36%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            margin: 3px;
+        }
+        .thumbnail1 {
+            background-image: url(2.jpg);
+            width: 36%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            margin: 3px;
+        }
+        .thumbnail2 {
+            background-image: url(3.jpg);
+            width: 36%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            margin: 3px;
+        }
+        .thumbnail3 {
+            background-image:url(4.jpg) ;
+            width: 36%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            margin: 3px;
+        }
+        .thumbnail4 {
+            background-color: #ddd;
+            width: 36%;
+            height: 150px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            color: #333;
+            margin: 3px;
+        }
+        .right-column {
+            flex: 1;
+        }
+        .right-column h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .rating {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .rating span {
+            margin-right: 10px;
+            color: #ff9800;
+        }
+        .price {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .discount {
+            color: red;
+            margin-right: 10px;
+        }
+        .price-now {
+            font-size: 24px;
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        .price-original {
+            text-decoration: line-through;
+        }
+        .limited-time-deal {
+            color: rgb(11, 12, 12);
+            font-weight: bold;
+            margin-bottom: 20px;
+            height: 36px;
+            width: 60%;
+            background-color: #e373f1;
+            
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+        .dabba {
+            background-color: #f3f1f3;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+        .delivery-info p, .order-info p {
+            margin: 5px 0;
+        }
+        .status-bar {
+            display: flex;
+            align-items: center;
+            margin-top: 10px;
+        }
+        .blinking-dot {
+            height: 10px;
+            width: 10px;
+            background-color: #088608;
+            border-radius: 50%;
+            margin-right: 10px;
+            animation: blink 1s infinite;
+        }
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0; }
+        }
+        .status-text {
+            font-size: 14px;
+            color: #020a01;
+        }
+        .quantity {
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .order-button {
+            text-align: center;
+        }
+        .order-button button {
+            background-color: green;
+            color: white;
+            padding: 10px 20px;
+            width: 100%;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            border-radius: 34px;
+            height: 2cm;
+            font-size: 22px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            
+        }
+        .order-button button:hover {
+            background-color: rgb(26, 85, 8);
+        }
+        .footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+        }
+        .form-container {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+            margin: 50px auto;
+        }
+        .form-container h2 {
+            margin-bottom: 15px;
+            color: #333333;
+        }
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+            color: #666666;
+        }
+        .form-container input[type="text"],
+        .form-container input[type="tel"],
+        .form-container select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #cccccc;
+            border-radius: 5px;
+            box-sizing: border-box;
+        }
+        .form-container input[type="submit"] {
+            background-color: #095cb4;
+            color: #ffffff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            justify-content: center;
+            display: flex;
+        }
+        .form-container input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+        .about-section {
+            background-color: #ffffff;
+            padding: 50px 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 100%;
+            margin: 50px auto;
+            text-align: center;
+        }
+        .about-section h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #333333;
+        }
+        .about-section p {
+            font-size: 1.2em;
+            color: #666666;
+            line-height: 1.6;
+        }
+        .about-section ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .about-section ul li {
+            margin: 10px 0;
+            color: #333333;
+        }
+        .about-section a {
+            color: #007bff;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .about-section a:hover {
+            color: #0056b3;
+        }
+        .customer-ratings {
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+.raating {
+  
+    background: rgb(13, 224, 196);
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    margin: 20px;
+}
+.rating {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.user-image {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.user-name {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.time {
+    color: #666666;
+    font-size: 0.8em;
+ }
+
+ #butto {
+    height: 2cm;
+    width: 100%;
+    
+ }
+ 
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">ALL INDIA FREE & FAST DELIVERY</div>
+        <div class="main-content">
+            <div class="left-column">
+                <div class="main-image"></div>
+                <div class="thumbnail-images">
+                    <div class="thumbnail1"></div>
+                    <div class="thumbnail2"></div>
+                    <div class="thumbnail3"></div>
+                    <div class="thumbnail4"></div>
+                </div>
+            </div>
+            <div class="right-column">
+                <h1>Product Description</h1>
+                <div class="raating">
+                    <span>  <h3>4.5 ★★★★★</h3></span>
+                    <span><h3> 4,595 ratings</h3></span>
+                    <span> <h3>#1 Best Seller</h3></span>
+                </div>
+                <div class="price">
+                    <span class="discount">-59%</span>
+                    <span class="price-now">₹299</span>
+                    <span class="price-original">M.R.P.: ₹695</span>
+                </div>
+                <div class="limited-time-deal">Limited time deal</div>
+                <div class="dabba">
+                    <div class="delivery-info">
+                        <p>All India Delivery within 5-10 Days</p>
+                        <p>7 Day replacement (Return in 7 Days)</p>
+                        <div class="status-bar">
+                            <span class="blinking-dot"></span>
+                            <span class="status-text"><b>Today sucess Delivery :</b><span id="biodata-count"><b>123</b></span></span>
+                        </div>
+                    </div>
+                    <div class="order-info">
+                        <p>₹299</p>
+                        <p>FREE delivery within 7 Days</p>
+                        <p>In stock</p>
+                        <p>Ships from: Messo</p>
+                        <p>Sold by: Best & Cheap</p>
+                        <div class="quantity">
+                            <label for="quantity">Quantity:</label>
+                            <select id="quantity">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                            </select>
+                        </div>
+                        <div class="order-button">
+                            <button id="orderNowButton">Order Now !</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+            <div class="customer-ratings">
+                <div class="rating">
+                    <img src="b1.png" alt="User Image" class="user-image">
+                    <div class="user-info">
+                        <span class="user-name">Rahul Sharma</span>
+                        <span class="time">5 days ago</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="comment">Amazing product! Highly recommend it.</p>
+                </div>
+                <div class="rating">
+                    <img src="Screenshot (145).png" alt="User Image" class="user-image">
+                    <div class="user-info">
+                        <span class="user-name">Anita Verma</span>
+                        <span class="time">1 week ago</span>
+                    </div>
+                    <div class="stars">★★★★☆</div>
+                    <p class="comment">Good value for money. Will buy again.</p>
+                </div>
+                <div class="rating">
+                    <img src="b2.png" alt="User Image" class="user-image">
+                    <div class="user-info">
+                        <span class="user-name">Vikram Singh</span>
+                        <span class="time">2 weeks ago</span>
+                    </div>
+                    <div class="stars">★★★★★</div>
+                    <p class="comment">Excellent quality and fast delivery!</p>
+                </div>
+            <
+            
+        </div>
+        
+    </div>
+    <div class="container">
+        <div class="content">
+            <div class="form-container">
+                <form id="contactForm">
+                    <h2>Contact Details</h2>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <h2>Address</h2>
+                    <label for="house">House No./Building Name:</label>
+                    <input type="text" id="house" name="house" required>
+
+                    <label for="road">Road Name/Area/Colony:</label>
+                    <input type="text" id="road" name="road" required>
+
+                    <label for="pincode">Pin Code:</label>
+                    <input type="text" id="pincode" name="pincode" required>
+
+                    <label for="city">City:</label>
+                    <input type="text" id="city" name="city" required>
+
+                    <label for="state">State:</label>
+                    <select id="state" name="state" required>
+                        <option value="">Select State</option>
+                        <option value="Andhra Pradesh">Andhra Pradesh</option>
+                        <option value="Arunachal Pradesh">Arunachal Pradesh</option>
+                        <option value="Assam">Assam</option>
+                        <option value="Bihar">Bihar</option>
+                        <option value="Chhattisgarh">Chhattisgarh</option>
+                        <option value="Goa">Goa</option>
+                        <option value="Gujarat">Gujarat</option>
+                        <option value="Haryana">Haryana</option>
+                        <option value="Himachal Pradesh">Himachal Pradesh</option>
+                        <option value="Jharkhand">Jharkhand</option>
+                        <option value="Karnataka">Karnataka</option>
+                        <option value="Kerala">Kerala</option>
+                        <option value="Madhya Pradesh">Madhya Pradesh</option>
+                        <option value="Maharashtra">Maharashtra</option>
+                        <option value="Manipur">Manipur</option>
+                        <option value="Meghalaya">Meghalaya</option>
+                        <option value="Mizoram">Mizoram</option>
+                        <option value="Nagaland">Nagaland</option>
+                        <option value="Odisha">Odisha</option>
+                        <option value="Punjab">Punjab</option>
+                        <option value="Rajasthan">Rajasthan</option>
+                        <option value="Sikkim">Sikkim</option>
+                        <option value="Tamil Nadu">Tamil Nadu</option>
+                        <option value="Telangana">Telangana</option>
+                        <option value="Tripura">Tripura</option>
+                        <option value="Uttar Pradesh">Uttar Pradesh</option>
+                        <option value="Uttarakhand">Uttarakhand</option>
+                        <option value="West Bengal">West Bengal</option>
+                    </select>
+
+                    <label for="landmark">Landmark:</label>
+                    <input type="text" id="landmark" name="landmark">
+
+                    <input  id="butto" type="submit" value="Submit">
+                </form>
+            </div>
+        </div>
+    </div>
+           
+            <div class="about-section">
+                <h2>About Us</h2>
+                <p>Welcome to <b>Best & Cheap</b>, your trusted partner in finding the best products for your needs. We are committed to providing high-quality, reliable, and innovative products that enhance your daily life.</p>
+                <p>At <b>Best & Cheap</b>, we believe in:</p>
+                <ul>
+                    <li>Quality: We rigorously test all our products to ensure they meet the highest standards.</li>
+                    <li>Customer Satisfaction: Your satisfaction is our top priority. We are here to assist you with any questions or concerns.</li>
+                    <li>Value: We offer competitive prices without compromising on quality.</li>
+                    <li>Integrity: We operate with transparency and honesty, ensuring you can trust us with your purchases.</li>
+                </ul>
+                <p>Our dedicated team works tirelessly to bring you the latest and greatest products, backed by excellent customer service. We strive to build lasting relationships with our customers through trust, reliability, and mutual respect.</p>
+                <p>Thank you for choosing <b>Best & Cheap</b>. We look forward to serving you!</p>
+                <p>Feel free  if you have any questions or need further assistance. You can also reach us on Telegram at <a href="https://t.me/ZenGautam" target="_blank">@ZenGautam</a>.</p>
+            </div>
+            
+       
+    </div>
+
+    <script>
+       document.getElementById('orderNowButton').addEventListener('click', function() {
+            document.getElementById('contactForm').scrollIntoView({ behavior: 'smooth' });
+        });
+       
+       document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get form data
+            const formData = new FormData(this);
+            const data = {};
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+            // Handle form data (e.g., send it to your server or display it)
+            console.log(data);
+        });
+
+        // Function to generate a random number between min and max
+        function getRandomNumber(min, max) {
+            return Math.floor(Math.random() * (max - min + 1)) + min;
+        }
+
+        // Function to initialize the biodata count
+        function initializeBiodataCount() {
+            const initialCount = getRandomNumber(150, 200);
+            localStorage.setItem('biodataCount', initialCount);
+            localStorage.setItem('lastUpdateTime', new Date().toISOString());
+            document.getElementById('biodata-count').textContent = initialCount;
+        }
+
+        // Function to update the biodata count
+        function updateBiodataCount() {
+            const lastUpdateTime = new Date(localStorage.getItem('lastUpdateTime'));
+            const now = new Date();
+
+            // Check if it's past midnight
+            if (now.getDate() !== lastUpdateTime.getDate()) {
+                initializeBiodataCount();
+            } else {
+                // Update count every 10 minutes
+                const currentCount = parseInt(localStorage.getItem('biodataCount'));
+                localStorage.setItem('biodataCount', currentCount + 1);
+                localStorage.setItem('lastUpdateTime', now.toISOString());
+                document.getElementById('biodata-count').textContent = currentCount + 1;
+            }
+        }
+
+        // Initialize the biodata count on page load if not already set
+        if (!localStorage.getItem('biodataCount')) {
+            initializeBiodataCount();
+        } else {
+            document.getElementById('biodata-count').textContent = localStorage.getItem('biodataCount');
+        }
+
+        // Update the count every 10 minutes (600000 milliseconds)
+        setInterval(updateBiodataCount, 600000);
+
+        // Reset count at midnight
+        function resetAtMidnight() {
+            const now = new Date();
+            const msUntilMidnight = new Date(now.getFullYear(), now.getMonth(), now.getDate() + 1).getTime() - now.getTime();
+            setTimeout(() => {
+                initializeBiodataCount();
+                resetAtMidnight(); // Schedule the next reset
+            }, msUntilMidnight);
+        }
+
+        resetAtMidnight();
+    </script>
+</body>
+</html>
